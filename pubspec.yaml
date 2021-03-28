@@ -1,6 +1,6 @@
 name: feature_toggle
 description: Flutter feature toggle enable or disable specific feature on runtime.
-version: 0.0.1
+version: 0.1.0
 homepage: https://www.ud-softworks.dev
 
 environment:

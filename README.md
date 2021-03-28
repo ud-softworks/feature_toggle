@@ -1,6 +1,7 @@
 # feature_toggle
 
-Flutter feature toggle enable or disable specific feature on runtime.
+Flutter feature toggle (enable/disable) widgets on runtime.
+I have a lot of (stupid) ideas to enhance this a lot.
 
 ## WARNING
 

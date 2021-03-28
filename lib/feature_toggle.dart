@@ -1,7 +1,6 @@
+/// FeatureToggle helps you a enable/disable features
+/// of your wonderful app on runtime.
 library feature_toggle;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/feature_toggle.dart';
+export 'src/feature_toggle_controller.dart';

@@ -4,7 +4,7 @@ import 'package:feature_toggle/feature_toggle.dart';
 
 void main() {
   test('Dummy test', () {
-    FeatureToggleController.init();
+    FeatureToggle.init();
     print('Party on....');
   });
 }

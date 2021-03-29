@@ -1,32 +1,19 @@
-import 'package:feature_toggle/feature_toggle.dart';
-import 'package:flutter/material.dart';
+/// Instance of FeatureToggle Controller
+// ignore: non_constant_identifier_names
+final FeatureToggle = _FeatureToggle();
 
-/// FeatureToggle with very a good description.
-/// I cross my fingers that nobody reads this right now.
-class FeatureToggle extends StatelessWidget {
-  /// Create a new FeatureToggle
-  FeatureToggle(
-    this.feature, {
-    Key? key,
-    this.parent,
-    this.child = const SizedBox.shrink(),
-    this.empty = const SizedBox.shrink(),
-  }) : super(key: key);
+class _FeatureToggle {
+  factory _FeatureToggle() => _ftInstance ??= _FeatureToggle._();
 
-  /// Name of this feature
-  final String feature;
+  const _FeatureToggle._();
 
-  /// If your Widget needs to have a parent widget.
-  final Widget? parent;
+  static _FeatureToggle? _ftInstance;
 
-  /// Widget to be rendered when this feature is enabled.
-  final Widget child;
+  void init() {
+    print('Init');
+  }
 
-  /// Widget to be rendered when this is disabled.
-  final Widget empty;
-
-  @override
-  Widget build(BuildContext context) {
-    return FeatureToggleController.isEnable(feature) ? child : empty;
+  bool isEnable(String feature) {
+    return feature.startsWith('true.');
   }
 }
